@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>＊　数学のページ　＊</title>
+        <meta charset="utf-8"></meta>
+    </head>
+
+    <!-- BODY  -->
+
+    <body>
+        <div class="center">
+            <p><font size=6> 数学の問題 </font></p>
+            <hr>
+            <div class="problem">
+                <p>【問題】</p>
+                <p>a_n+2 = a_n+1 + a_n a_0, a_1 = 1 のとき</p>
+                <p>lim n→∞ a_(n+1)/a_n の値を求めよ</p>
+                <p></p>
+            </div>
+            <hr>
+            <form action="math.html" method="get" name="form">
+                <p>正解すると、幻の部屋への扉が開かれる</p>
+                ([　])/2: [　]に当てはまるのは？ <input type="text" name="answer">
+                <input type="submit" value="送信" onClick="return check();">
+            </form>
+            
+            <hr>
+
+            <p><a href="index.html">戻る</a></p>
+        </body>
+    </body>
+</html>
+
+<style>
+    body{
+        background-color: black;
+        margin: 0 auto; 
+    }
+    html{
+        color: white
+    }
+    div.center{
+        text-align: center;
+        background-color: #000080;
+    }
+    div.problem{
+        background-color: gray;
+    }
+</style>
+
+<script>
+    function check(){
+        // -----------------------------------------------------------
+        //
+        // コラーーーーー！！！！！
+        // お前、カンニングしようとしてるだろ！！！！！！！！！！！！！！！
+        //
+        // -----------------------------------------------------------
+        if (form.answer.value == "1+√5"){
+            alert("正解！あなたを†幻の部屋†へ招待します");
+            window.open('secret.html', '_blank')
+            return true;
+        }else{
+            alert("答えが違います");
+            return false;
+        }
+    }
+</script>
