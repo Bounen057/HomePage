@@ -10,12 +10,23 @@
     <body id="load">
         <div class="center">
             <button id="button">これはボタンではありません</button>
+            
             <hr>
+            
             <p></p>
-            <div id="counter"> 000 </div>
+            <table border="0" cellspacing="0" cellpadding="0"><tr><td align="center"><a href="http://www.rays-counter.com/"><img src="http://www.rays-counter.com/d492_f6_022/613d9fe85e113/" alt="アクセスカウンター" border="0"></a></td></tr><tr><td align="center"><img src="http://www.rays-counter.com/images/counter_01.gif" border="0"><img src="http://www.rays-counter.com/images/counter_02.gif" border="0"><img src="http://www.rays-counter.com/images/counter_03.gif" border="0"><img src="http://www.rays-counter.com/images/counter_04.gif" border="0" ><img src="http://www.rays-counter.com/images/counter_05.gif" border="0"></td></tr></table><!--ここまで-->
+            <p></p>
+
+            <hr>
+            
+            <img class="cat" src="cat.png" alt="猫の写真">
             <p></p>
             <hr>
-            <img src="cat.png" alt="猫の写真">
+            
+            <p><font size=5> ＊＊＊ バナー置き場　＊＊＊ </font></p>
+            <a href="https://shouzue.x.fc2.com"><img src="https://shouzue.x.fc2.com/banner.gif" width=200 height=40></a>
+            
+        
         </body>
     </body>
 </html>
@@ -24,7 +35,7 @@
     body{
         background-color: #ffc6ae;
     }
-    img {
+    img.cat {
         animation: rotate-anime 3s linear infinite;
     }
     @keyframes rotate-anime {
@@ -42,14 +53,4 @@
     $('#button').click(function() {
         alert("ボタンじゃないって言っとるだろうが！")
     });
-
-    $('#load').ready(counter_function());
-
-    function counter_function(){
-        var counter = localStorage.getItem("counter")
-
-        counter++;
-        document.getElementById("counter").innerText = counter + "人目のお客さんです！";
-        localStorage.setItem("counter", counter);
-    }
 </script>
