@@ -1,0 +1,55 @@
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <head>
+        <title>＊　ホームページ　＊</title>
+        <meta charset="utf-8"></meta>
+    </head>
+
+    <!-- BODY  -->
+
+    <body id="load">
+        <div class="center">
+            <button id="button">これはボタンではありません</button>
+            <hr>
+            <p></p>
+            <div id="counter"> 000 </div>
+            <p></p>
+            <hr>
+            <img src="cat.png" alt="猫の写真">
+        </body>
+    </body>
+</html>
+
+<style>
+    body{
+        background-color: #ffc6ae;
+    }
+    img {
+        animation: rotate-anime 3s linear infinite;
+    }
+    @keyframes rotate-anime {
+        0%  {transform: rotate(0);}
+        100%  {transform: rotate(720deg);}
+    }
+    div.center{
+        text-align: center;
+        background-color: #ffe8dd;
+    }
+</style>
+
+<script>
+
+    $('#button').click(function() {
+        alert("ボタンじゃないって言っとるだろうが！")
+    });
+
+    $('#load').ready(counter_function());
+
+    function counter_function(){
+        var counter = localStorage.getItem("counter")
+
+        counter++;
+        document.getElementById("counter").innerText = counter + "人目のお客さんです！";
+        localStorage.setItem("counter", counter);
+    }
+</script>
